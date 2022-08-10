@@ -14,7 +14,7 @@
 
     <script type='text/javascript'>
         function generateId () {
-        return Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
+            return Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
         }
 
         // App Code
@@ -329,7 +329,7 @@
                     <Context.Consumer>
                         {(store) => (
                             <App store={store} />
-                         )}
+                        )}
                     </Context.Consumer>
                 )
             }
@@ -337,9 +337,9 @@
 
         const Context = React.createContext()
 
-        class Provider extends React.Compomnent {
+        class Provider extends React.Component {
             render () {
-                retrun (
+                return (
                     <Context.Provider value={this.props.store}>
                         {this.props.children}
                     </Context.Provider>
